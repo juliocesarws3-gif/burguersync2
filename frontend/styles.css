@@ -1,0 +1,198 @@
+/* ==========================================================================
+   BurguerSync Ourinhos - Design System (Dark Mode Premium)
+   Gerado e sincronizado com Google Stitch Design Tokens
+   ========================================================================== */
+
+:root {
+  --bg-main: #121214;
+  --surface-card: #202024;
+  --surface-card-hover: #29292E;
+  --surface-container-low: #1b1b1f;
+  --surface-container-lowest: #0e0e12;
+  --surface-container-high: #2a2a2e;
+  --surface-variant: #353439;
+  
+  --primary: #FF9000;
+  --primary-light: #FFB97C;
+  --on-primary: #121214;
+  
+  --status-done: #04D361;
+  --status-prep: #FF9000;
+  --status-delivery: #3B82F6;
+  --status-received: #A8A8B3;
+  --kitchen-alert: #F6E58D;
+  
+  --text-primary: #E1E1E6;
+  --text-secondary: #A8A8B3;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-focus: #FF9000;
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar estilizada */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface-container-lowest);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-variant);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Transições de abas */
+.view-section {
+  display: none;
+  animation: fadeIn 0.25s ease-in-out;
+}
+.view-section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Efeito de pulso para botões e alertas */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(4, 211, 97, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(4, 211, 97, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(4, 211, 97, 0); }
+}
+
+.btn-pulsing {
+  animation: pulseGlow 2s infinite;
+}
+
+/* Cardápio & Cards de Produto */
+.card-lanche {
+  background-color: var(--surface-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card-lanche:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(255, 144, 0, 0.15);
+  border-color: rgba(255, 144, 0, 0.3);
+}
+
+/* Kanban Cards & Status Borders */
+.card-pedido {
+  background-color: var(--surface-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.card-pedido:hover {
+  background-color: var(--surface-card-hover);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.card-pedido[data-status="Recebido"] {
+  border-left: 4px solid var(--status-received);
+}
+.card-pedido[data-status="Em Preparo"] {
+  border-left: 4px solid var(--status-prep);
+  box-shadow: 0 0 10px rgba(255, 144, 0, 0.15);
+}
+.card-pedido[data-status="Saiu para Entrega"] {
+  border-left: 4px solid var(--status-delivery);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.15);
+}
+.card-pedido[data-status="Entregue"] {
+  border-left: 4px solid var(--status-done);
+  opacity: 0.85;
+}
+
+/* Status Badges */
+.badge-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-recebido {
+  background: rgba(168, 168, 179, 0.15);
+  color: var(--status-received);
+  border: 1px solid rgba(168, 168, 179, 0.3);
+}
+
+.badge-preparo {
+  background: rgba(255, 144, 0, 0.15);
+  color: var(--status-prep);
+  border: 1px solid rgba(255, 144, 0, 0.4);
+  box-shadow: 0 0 8px rgba(255, 144, 0, 0.3);
+}
+
+.badge-entrega {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--status-delivery);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+}
+
+.badge-entregue {
+  background: rgba(4, 211, 97, 0.15);
+  color: var(--status-done);
+  border: 1px solid rgba(4, 211, 97, 0.4);
+  box-shadow: 0 0 8px rgba(4, 211, 97, 0.3);
+}
+
+/* Alerta de Cozinha */
+.obs-cozinha-box {
+  background-color: rgba(246, 229, 141, 0.12);
+  border: 1px solid rgba(246, 229, 141, 0.35);
+  color: var(--kitchen-alert);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  font-size: 13px;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+/* Responsividade Mobile-First */
+@media (max-width: 640px) {
+  .carrinho-flutuante {
+    position: static;
+  }
+}

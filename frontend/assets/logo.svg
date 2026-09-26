@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
+  <g transform="translate(10, 6)">
+    <!-- Burger Icon with Neon Glow -->
+    <path d="M6 18C6 9.71573 12.7157 3 21 3C29.2843 3 36 9.71573 36 18H6Z" fill="#FF9000"/>
+    <rect x="4" y="22" width="34" height="4" rx="2" fill="#04D361"/>
+    <rect x="7" y="29" width="28" height="4" rx="2" fill="#E1E1E6" opacity="0.8"/>
+    <path d="M6 36C6 36 6 42 21 42C36 42 36 36 36 36H6Z" fill="#FF9000"/>
+    <!-- Sync / lightning glow dot -->
+    <circle cx="36" cy="10" r="4" fill="#04D361"/>
+  </g>
+  <text x="60" y="30" font-family="'Inter', sans-serif" font-weight="800" font-size="20" fill="#E1E1E6" letter-spacing="-0.5">BURGUER<tspan fill="#FF9000">SYNC</tspan></text>
+  <text x="60" y="44" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#A8A8B3" letter-spacing="2">OURINHOS • ARTESANAL</text>
+</svg>
