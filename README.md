@@ -16,6 +16,12 @@
   <img src="https://img.shields.io/badge/JavaScript-ES6%20Modules-F7DF1E?style=for-the-badge&logo=javascript" alt="JavaScript">
   <img src="https://img.shields.io/badge/TailwindCSS-v3.4-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind">
   <img src="https://img.shields.io/badge/SENAI-Ourinhos%20SP-red?style=for-the-badge" alt="SENAI Ourinhos">
+  <a href="https://juliocesarws3-gif.github.io/burguersync2/"><img src="https://img.shields.io/badge/Demo%20Live-GitHub%20Pages-04D361?style=for-the-badge&logo=github" alt="Demo Live GitHub Pages"></a>
+</p>
+
+<p align="center">
+  🌐 <strong>Link de Acesso Online (GitHub Pages):</strong><br>
+  👉 <a href="https://juliocesarws3-gif.github.io/burguersync2/"><strong>https://juliocesarws3-gif.github.io/burguersync2/</strong></a>
 </p>
 
 ---
